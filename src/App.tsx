@@ -1,8 +1,6 @@
 import {
-  AuthBindings,
-  GitHubBanner,
+  AuthBindings,  
   Refine,
-  WelcomePage,
 } from "@refinedev/core";
 import { RefineKbar, RefineKbarProvider } from "@refinedev/kbar";
 
@@ -112,8 +110,7 @@ function App() {
   };
 
   return (
-    <BrowserRouter>
-      <GitHubBanner />
+    <BrowserRouter>      
       <RefineKbarProvider>
         <Refine
           dataProvider={gqlDataProvider}
@@ -125,7 +122,7 @@ function App() {
           }}
         >
           <Routes>
-            <Route index element={<WelcomePage />} />
+            <Route index element={<div>Travel</div>} />
           </Routes>
           <RefineKbar />
           <UnsavedChangesNotifier />
